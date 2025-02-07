@@ -6,6 +6,7 @@ int setallbitgivenrange(int n, int l, int r)
 }
 int main()
 {
+    // here, l, r are starting 1, not from 0
     int n = 17, l = 2, r = 3;
     printf("%d", setallbitgivenrange(n, l, r));
     return 0;
