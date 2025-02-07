@@ -1,13 +1,14 @@
 #include<stdio.h>
 
-int add(int a, int b)
-{
-    while(b > 0)
-    {
-        int carry = a & b;
-        a = a ^ b;
-        b = carry << 1;
+int add(int a, int b){
+    if (a < b) add(b, a);
+
+    while (b){
+        int t = (a&b)<<1;
+        a = a^b; 
+        b = t;
     }
+
     return a;
 }
 
