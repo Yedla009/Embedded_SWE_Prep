@@ -2,7 +2,7 @@
 #include<math.h>
 
 int posRmB(int n){
-  return log2(n & ~(n - 1)) + 1;
+  return n > 0 : (log2(n & ~(n - 1)) + 1) : 0;
 }
 
 int main()
